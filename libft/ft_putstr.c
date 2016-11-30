@@ -6,7 +6,7 @@
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 10:36:47 by aridolfi          #+#    #+#             */
-/*   Updated: 2016/11/09 10:44:18 by aridolfi         ###   ########.fr       */
+/*   Updated: 2016/11/18 18:41:51 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 void	ft_putstr(char const *s)
 {
-	while (*s)
-		ft_putchar(*s++);
+	write(1, s, ft_strlen(s));
 }

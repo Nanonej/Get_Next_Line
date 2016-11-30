@@ -6,12 +6,11 @@
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 15:04:39 by aridolfi          #+#    #+#             */
-/*   Updated: 2016/11/10 22:47:04 by aridolfi         ###   ########.fr       */
+/*   Updated: 2016/11/22 15:19:51 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
