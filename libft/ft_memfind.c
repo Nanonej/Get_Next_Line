@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_memfind.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/15 22:17:55 by aridolfi          #+#    #+#             */
-/*   Updated: 2016/11/30 12:28:08 by aridolfi         ###   ########.fr       */
+/*   Created: 2016/11/30 12:25:45 by aridolfi          #+#    #+#             */
+/*   Updated: 2016/11/30 12:27:56 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
-int		ft_linelen(char *save)
+int	ft_memfind(const void *s, int c, size_t n)
 {
 	int i;
 
-	while (save[i] != '\n')
-}
-
-int		get_next_line(const int fd, char **line)
-{
-	int				ret;
-	char			buff[BUFF_SIZE + 1];
-	static char		*save;
-
-	ret = 1;
-	if (fd < 0)
-		return (ERROR);
-	if (*line)
-		free(*line)
-	if (save != NULL && ft_strfind(save, '\n') != -1)
+	i = 0;
+	while (n-- > 0)
 	{
-		ft_linelen(save);
-		ret = read(fd, buff, BUFF_SIZE);
-		buff[ret] = '\0';
+		if ((unsigned char*)s[i] == (unsigned char)c)
+			return (i);
+		i++;
 	}
-	return (1);
+	return (-1);
 }

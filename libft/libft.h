@@ -6,7 +6,7 @@
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 19:00:36 by aridolfi          #+#    #+#             */
-/*   Updated: 2016/11/11 23:56:25 by aridolfi         ###   ########.fr       */
+/*   Updated: 2016/11/30 12:28:36 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,7 @@ int				ft_digitcount(int n);
 void			ft_memswap(void *a, void *b);
 void			ft_lstback(t_list **begin_list, t_list *new);
 void			ft_int_tab_bubble(int *tab, size_t size);
+int				ft_strfind(const char *s, int c);
+int				ft_memfind(const void *s, int c, size_t n);
 
 #endif
