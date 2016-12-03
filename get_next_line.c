@@ -6,13 +6,13 @@
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 22:17:55 by aridolfi          #+#    #+#             */
-/*   Updated: 2016/12/03 12:39:04 by aridolfi         ###   ########.fr       */
+/*   Updated: 2016/12/03 13:37:47 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static t_fd			*new_elem(const int fd, char *buff, t_fd **lfd)
+static t_fd		*new_elem(const int fd, char *buff, t_fd **lfd)
 {
 	t_fd			*new;
 
@@ -27,7 +27,7 @@ static t_fd			*new_elem(const int fd, char *buff, t_fd **lfd)
 	return (new);
 }
 
-static t_fd			*fd_tracker(const int fd, t_fd *lfd)
+static t_fd		*fd_tracker(const int fd, t_fd *lfd)
 {
 	while (lfd)
 	{
@@ -38,7 +38,7 @@ static t_fd			*fd_tracker(const int fd, t_fd *lfd)
 	return (NULL);
 }
 
-static int			check_elem(const int fd, char *buff, t_fd **lfd)
+static int		check_elem(const int fd, char *buff, t_fd **lfd)
 {
 	t_fd			*elem;
 	char			*tmp;
@@ -90,7 +90,7 @@ static char		*line_tracker(const int fd, t_fd *lfd)
 	return (get);
 }
 
-int					get_next_line(const int fd, char **line)
+int				get_next_line(const int fd, char **line)
 {
 	static t_fd	*lfd;
 	char		buff[BUFF_SIZE + 1];
