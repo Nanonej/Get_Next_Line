@@ -6,7 +6,7 @@
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 22:17:55 by aridolfi          #+#    #+#             */
-/*   Updated: 2016/12/03 12:35:39 by aridolfi         ###   ########.fr       */
+/*   Updated: 2016/12/03 12:39:04 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,16 @@ static int			check_elem(const int fd, char *buff, t_fd **lfd)
 	if (!elem)
 	{
 		if (!(elem = new_elem(fd, buff, lfd)))
-			return (-1);
+			return (ERROR);
 	}
 	else
 	{
 		if (!(tmp = ft_strjoin(elem->buff, buff)))
-			return (-1);
+			return (ERROR);
 		free(elem->buff);
 		elem->buff = tmp;
 	}
-	if (ft_strfind(elem->buff, '\n') != -1)
+	if (ft_strfind(elem->buff, '\n') != ERROR)
 		return (1);
 	return (0);
 }
@@ -71,7 +71,7 @@ static char		*line_tracker(const int fd, t_fd *lfd)
 	get = NULL;
 	if (!(elem = fd_tracker(fd, lfd)) || !elem->buff)
 		return (NULL);
-	if ((ret = ft_strfind(elem->buff, '\n')) != -1)
+	if ((ret = ft_strfind(elem->buff, '\n')) != ERROR)
 	{
 		if (!(get = ft_strsub(elem->buff, 0, ret)))
 			return (NULL);
@@ -98,19 +98,19 @@ int					get_next_line(const int fd, char **line)
 	int			back;
 
 	if (fd < 0 || line == NULL)
-		return (-1);
+		return (ERROR);
 	while ((ret = read(fd, buff, BUFF_SIZE)) != 0)
 	{
 		if (ret < 0)
-			return (-1);
+			return (ERROR);
 		buff[ret] = '\0';
 		if ((back = check_elem(fd, buff, &lfd)) == 1)
 		{
 			*line = line_tracker(fd, lfd);
 			return (1);
 		}
-		if (back == -1)
-			return (-1);
+		if (back == ERROR)
+			return (ERROR);
 	}
 	if ((*line = line_tracker(fd, lfd)) != NULL)
 		return (1);

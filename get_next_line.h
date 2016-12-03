@@ -6,7 +6,7 @@
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 22:18:27 by aridolfi          #+#    #+#             */
-/*   Updated: 2016/12/01 16:26:26 by aridolfi         ###   ########.fr       */
+/*   Updated: 2016/12/03 12:39:53 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@
 
 typedef struct	s_fd
 {
-	void			*content;
-	size_t			content_size;
+	char			*buff;
 	int				fd;
 	struct s_fd		*next;
 }				t_fd;
