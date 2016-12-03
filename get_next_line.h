@@ -6,7 +6,7 @@
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 22:18:27 by aridolfi          #+#    #+#             */
-/*   Updated: 2016/11/29 13:58:19 by aridolfi         ###   ########.fr       */
+/*   Updated: 2016/12/01 16:26:26 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,14 @@
 # define BUFF_SIZE 4096
 # define ERROR -1
 
-int		get_next_line(const int fd, char **line);
+typedef struct	s_fd
+{
+	void			*content;
+	size_t			content_size;
+	int				fd;
+	struct s_fd		*next;
+}				t_fd;
+
+int				get_next_line(const int fd, char **line);
 
 #endif

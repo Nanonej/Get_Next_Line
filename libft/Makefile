@@ -6,7 +6,7 @@
 #    By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 22:47:07 by aridolfi          #+#    #+#              #
-#    Updated: 2016/11/14 11:08:26 by aridolfi         ###   ########.fr        #
+#    Updated: 2016/12/01 19:05:53 by aridolfi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRCS =	ft_atoi.c			\
 		ft_memcmp.c			\
 		ft_memcpy.c			\
 		ft_memdel.c			\
+		ft_memfind.c		\
 		ft_memmove.c		\
 		ft_memset.c			\
 		ft_memswap.c		\
@@ -55,6 +56,7 @@ SRCS =	ft_atoi.c			\
 		ft_strdel.c			\
 		ft_strdup.c			\
 		ft_strequ.c			\
+		ft_strfind.c		\
 		ft_striter.c		\
 		ft_striteri.c		\
 		ft_strjoin.c		\
